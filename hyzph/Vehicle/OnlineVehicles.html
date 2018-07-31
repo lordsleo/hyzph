@@ -1,0 +1,84 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=640" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>网上车场</title>
+    <link href="../Css/css.css" rel="stylesheet" />
+    <script src="Jquery/jquery-2.1.0.min.js"></script>
+    <script src="../Jquery/jquery-2.1.0.min.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $.getJSON("OnlineVehicles.aspx", null, function (ret) {
+
+                $("#table").empty();      
+                for (var i = 0; i < ret.length; ++i) {
+                    ret[i][2] = ret[i][2] != "" ? ret[i][2] : "-";
+                    ret[i][3] = ret[i][3] != "" ? ret[i][3] : "-";
+                    ret[i][4] = ret[i][4] != "" ? ret[i][4] : "-";
+                    var vehicleInfo = ret[i][2] + "米" + ', ' + ret[i][3] + ', ' + "载重" + ret[i][4] + "吨";
+                    var vehicleMDD = "求到" + ret[i][5] + ret[i][6] + "的货";
+                    var vehicleTime = ret[i][7] + '   ' + ret[i][8] + ret[i][9];
+                    $('#table').append("<li class='li'><span class='name'>" + ret[i][0] + "</span><span class='vehicleNum'>" + ret[i][1] + "</span><span class='img1'><img src=\"..\/Images/shen2.png\" /></span><span class='img1'><img src=\"..\/Images/jia2.png\" /></span><span class='img1'><img src=\"..\/Images/xing2.png\"/></span><span class='img1'><img src=\"..\/Images/you2.png\" /></span><br /><span class='vehicleInfo'>" + vehicleInfo + "</span><br /> <span class='mdd'>" + vehicleMDD + "</span><br /><span class='line'>" + "_______________________________________________________________________" + "</span><br /><span class='imgTime'><img src=\"..\/Images/time.png\"/></span><span class='time'>" + vehicleTime + "</span></li>");
+                    $('#table').append("<li class='bk'></li>");
+                }
+                if (0 == ret.length) {
+                    $('#table').append("<tr><td colspan=\"1\"><img src=\"..\/Images\/Channel/none.png\" width=\"640\" height=\"220\"/></td></tr>");
+                }
+            })
+        })
+
+
+ 
+    </script>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="search_l">
+            <div class="title1">网上车场</div>
+        </div>
+        <!--<div class="bk20"></div>-->
+        <div class="stylebox">
+            <ul id="table">
+                <!--<li class='li'>
+                    <span class='name'>王前进</span><span class='vehicleNum'>苏G232222</span><span class="img1"><img src="../Images/shen2.png" /></span><span class="img1"><img src="../Images/jia2.png" /></span><span class="img1"><img src="../Images/xing2.png" /></span>  <br />
+                    <span class='vehicleInfo'>13米  高栏挂车  载重38吨</span><span class="img1"><img src="../Images/you2.png" /></span><br />
+                    <span class='mdd'>求到江苏连云港市的货</span><br />
+                    <span class='line'>__________________________________________________</span><br />
+                    <span class="imgTime"><img src="../Images/time.png" /></span><span class='time'>2016-6-29 10:00   江苏省连云港灌云</span>
+
+                </li>
+                <li class='bk'></li>
+                <li class='li'>
+                    <span class='name'>王前进</span><span class='vehicleNum'>苏G232222</span><span class="img1"><img src="../Images/shen2.png" /></span><span class="img1"><img src="../Images/jia2.png" /></span><span class="img1"><img src="../Images/xing2.png" /></span>  <br />
+                    <span class='vehicleInfo'>13米  高栏挂车  载重38吨</span><span class="img1"><img src="../Images/you2.png" /></span><br />
+                    <span class='mdd'>求到江苏连云港市的货</span><br />
+                    <span class='line'>__________________________________________________</span><br />
+                    <span class="imgTime"><img src="../Images/time.png" /></span><span class='time'>2016-6-29 10:00   江苏省连云港灌云</span>
+
+                </li>
+                <li class='bk'></li>
+                <li class='li'>
+                    <span class='name'>王前进</span><span class='vehicleNum'>苏G232222</span><span class="img1"><img src="../Images/shen2.png" /></span><span class="img1"><img src="../Images/jia2.png" /></span><span class="img1"><img src="../Images/xing2.png" /></span>  <br />
+                    <span class='vehicleInfo'>13米  高栏挂车  载重38吨</span><span class="img1"><img src="../Images/you2.png" /></span><br />
+                    <span class='mdd'>求到江苏连云港市的货</span><br />
+                    <span class='line'>__________________________________________________</span><br />
+                    <span class="imgTime"><img src="../Images/time.png" /></span><span class='time'>2016-6-29 10:00   江苏省连云港灌云</span>
+
+                </li>
+                <li class='bk'></li>-->
+            </ul>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

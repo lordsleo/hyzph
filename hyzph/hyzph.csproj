@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FA046270-AA48-454C-9212-169C671AEDA5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>hyzph</RootNamespace>
+    <AssemblyName>hyzph</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IPortData, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d68b0a7daaf47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\IPortData.dll</HintPath>
+    </Reference>
+    <Reference Include="leo, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\M_Lhgl\M_Lhgl\bin\leo.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Auth\AuthForConsignor.aspx" />
+    <Content Include="Auth\AuthForDriver.aspx" />
+    <Content Include="Auth\IdentityAuthForDriver.aspx" />
+    <Content Include="bin\IPortData.dll" />
+    <Content Include="bin\leo.dll" />
+    <Content Include="bin\log4net.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="Css\css.css" />
+    <Content Include="Css\slide.css" />
+    <Content Include="Deal\DealForConsingor.aspx" />
+    <Content Include="Deal\DealForDriver.aspx" />
+    <Content Include="Deal\DealInfoForDriver.aspx" />
+    <Content Include="Deal\DealingInfoForDriver.aspx" />
+    <Content Include="Fund\BalanceForConsignor.aspx" />
+    <Content Include="Fund\BalanceForDriver.aspx" />
+    <Content Include="Fund\PayForConsignor.aspx" />
+    <Content Include="Fund\PayForDriver.aspx" />
+    <Content Include="Goods\FindGoods.aspx" />
+    <Content Include="Goods\FindGoods2.aspx" />
+    <Content Include="Goods\FindGoodsByKeyword.aspx" />
+    <Content Include="Goods\GetGoodsReleased.aspx" />
+    <Content Include="Goods\GetGoodsReleasing.aspx" />
+    <Content Include="Goods\ModifyGoods.aspx" />
+    <Content Include="Goods\ReleaseGoods.aspx" />
+    <Content Include="Goods\RepealGoods.aspx" />
+    <Content Include="Images\ad\01.jpg" />
+    <Content Include="Images\ad\02.jpg" />
+    <Content Include="Images\ad\03.jpg" />
+    <Content Include="Images\ad\dot.png" />
+    <Content Include="Images\hui.png" />
+    <Content Include="Images\jia.png" />
+    <Content Include="Images\jia2.png" />
+    <Content Include="Images\none.png" />
+    <Content Include="Images\shen.png" />
+    <Content Include="Images\shen2.png" />
+    <Content Include="Images\time.png" />
+    <Content Include="Images\time2.png" />
+    <Content Include="Images\xing.png" />
+    <Content Include="Images\xing2.png" />
+    <Content Include="Images\you2.png" />
+    <Content Include="Jquery\jquery-2.1.0.min.js" />
+    <Content Include="Jquery\jquery.Slide.2.1.1.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="Page\Advertisement.html" />
+    <Content Include="Register.aspx" />
+    <Content Include="UserInfo\InfoForConsignor.aspx" />
+    <Content Include="UserInfo\InfoForDriver.aspx" />
+    <Content Include="Vehicle\GetVehiclePassed.aspx" />
+    <Content Include="Vehicle\GetVehicleReleasing.aspx" />
+    <Content Include="Vehicle\GetVehicleRepealMark.aspx" />
+    <Content Include="Vehicle\OnlineVehicles.aspx" />
+    <Content Include="Vehicle\OnlineVehicles.html" />
+    <Content Include="Vehicle\ReleaseVehicle.aspx" />
+    <Content Include="Vehicle\RepealVehicle.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auth\AuthForConsignor.aspx.cs">
+      <DependentUpon>AuthForConsignor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auth\AuthForConsignor.aspx.designer.cs">
+      <DependentUpon>AuthForConsignor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\AuthForDriver.aspx.cs">
+      <DependentUpon>AuthForDriver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auth\AuthForDriver.aspx.designer.cs">
+      <DependentUpon>AuthForDriver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\IdentityAuthForDriver.aspx.cs">
+      <DependentUpon>IdentityAuthForDriver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Auth\IdentityAuthForDriver.aspx.designer.cs">
+      <DependentUpon>IdentityAuthForDriver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\DicPackage.cs" />
+    <Compile Include="Common\LogTool.cs" />
+    <Compile Include="Common\TokenTool.cs" />
+    <Compile Include="Deal\DealForConsingor.aspx.cs">
+      <DependentUpon>DealForConsingor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Deal\DealForConsingor.aspx.designer.cs">
+      <DependentUpon>DealForConsingor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Deal\DealForDriver.aspx.cs">
+      <DependentUpon>DealForDriver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Deal\DealForDriver.aspx.designer.cs">
+      <DependentUpon>DealForDriver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Deal\DealInfoForDriver.aspx.cs">
+      <DependentUpon>DealInfoForDriver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Deal\DealInfoForDriver.aspx.designer.cs">
+      <DependentUpon>DealInfoForDriver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Deal\DealingInfoForDriver.aspx.cs">
+      <DependentUpon>DealingInfoForDriver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Deal\DealingInfoForDriver.aspx.designer.cs">
+      <DependentUpon>DealingInfoForDriver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\BalanceForConsignor.aspx.cs">
+      <DependentUpon>BalanceForConsignor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fund\BalanceForConsignor.aspx.designer.cs">
+      <DependentUpon>BalanceForConsignor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\BalanceForDriver.aspx.cs">
+      <DependentUpon>BalanceForDriver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fund\BalanceForDriver.aspx.designer.cs">
+      <DependentUpon>BalanceForDriver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\PayForConsignor.aspx.cs">
+      <DependentUpon>PayForConsignor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fund\PayForConsignor.aspx.designer.cs">
+      <DependentUpon>PayForConsignor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fund\PayForDriver.aspx.cs">
+      <DependentUpon>PayForDriver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fund\PayForDriver.aspx.designer.cs">
+      <DependentUpon>PayForDriver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\FindGoods.aspx.cs">
+      <DependentUpon>FindGoods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\FindGoods.aspx.designer.cs">
+      <DependentUpon>FindGoods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\FindGoods2.aspx.cs">
+      <DependentUpon>FindGoods2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\FindGoods2.aspx.designer.cs">
+      <DependentUpon>FindGoods2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\FindGoodsByKeyword.aspx.cs">
+      <DependentUpon>FindGoodsByKeyword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\FindGoodsByKeyword.aspx.designer.cs">
+      <DependentUpon>FindGoodsByKeyword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\GetGoodsReleased.aspx.cs">
+      <DependentUpon>GetGoodsReleased.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\GetGoodsReleased.aspx.designer.cs">
+      <DependentUpon>GetGoodsReleased.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\GetGoodsReleasing.aspx.cs">
+      <DependentUpon>GetGoodsReleasing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\GetGoodsReleasing.aspx.designer.cs">
+      <DependentUpon>GetGoodsReleasing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\ModifyGoods.aspx.cs">
+      <DependentUpon>ModifyGoods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\ModifyGoods.aspx.designer.cs">
+      <DependentUpon>ModifyGoods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\ReleaseGoods.aspx.cs">
+      <DependentUpon>ReleaseGoods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\ReleaseGoods.aspx.designer.cs">
+      <DependentUpon>ReleaseGoods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Goods\RepealGoods.aspx.cs">
+      <DependentUpon>RepealGoods.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Goods\RepealGoods.aspx.designer.cs">
+      <DependentUpon>RepealGoods.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\InfoForConsignor.aspx.cs">
+      <DependentUpon>InfoForConsignor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInfo\InfoForConsignor.aspx.designer.cs">
+      <DependentUpon>InfoForConsignor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo\InfoForDriver.aspx.cs">
+      <DependentUpon>InfoForDriver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserInfo\InfoForDriver.aspx.designer.cs">
+      <DependentUpon>InfoForDriver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle\GetVehiclePassed.aspx.cs">
+      <DependentUpon>GetVehiclePassed.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vehicle\GetVehiclePassed.aspx.designer.cs">
+      <DependentUpon>GetVehiclePassed.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle\GetVehicleReleasing.aspx.cs">
+      <DependentUpon>GetVehicleReleasing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vehicle\GetVehicleReleasing.aspx.designer.cs">
+      <DependentUpon>GetVehicleReleasing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle\GetVehicleRepealMark.aspx.cs">
+      <DependentUpon>GetVehicleRepealMark.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vehicle\GetVehicleRepealMark.aspx.designer.cs">
+      <DependentUpon>GetVehicleRepealMark.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle\OnlineVehicles.aspx.cs">
+      <DependentUpon>OnlineVehicles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vehicle\OnlineVehicles.aspx.designer.cs">
+      <DependentUpon>OnlineVehicles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle\ReleaseVehicle.aspx.cs">
+      <DependentUpon>ReleaseVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vehicle\ReleaseVehicle.aspx.designer.cs">
+      <DependentUpon>ReleaseVehicle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle\RepealVehicle.aspx.cs">
+      <DependentUpon>RepealVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vehicle\RepealVehicle.aspx.designer.cs">
+      <DependentUpon>RepealVehicle.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\fabu.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>15729</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:15729/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

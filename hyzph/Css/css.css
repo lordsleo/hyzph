@@ -1,0 +1,295 @@
+﻿@charset "utf-8";
+/*@charset "gb2312";*/
+/**
+ +------------------------------------------------------------------------------
+ * 网站样式重写
+ +------------------------------------------------------------------------------
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+html {
+	-webkit-text-size-adjust: none; /*解决chrome浏览器下字体不能小于12px*/
+}
+body {
+	color: #fff;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+* {
+}
+a {
+	outline: none;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+html {
+	zoom: 1;
+}
+html * {
+	outline: 0;
+	zoom: 1;
+}
+html button::-moz-focus-inner {
+border-color:transparent!important;
+}
+body {
+	overflow-x: hidden;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+table { /*border-collapse:collapse;border-spacing:0;*/
+}
+fieldset, a img {
+	border: 0;
+}
+address, caption, cite, code, dfn, em, th, var {
+	font-style: normal;
+	font-weight: normal;
+}
+li {
+	list-style: none;
+}
+caption, th {
+	text-align: left;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+q:before, q:after {
+	content: '';
+}
+input[type="submit"], input[type="reset"], input[type="button"], button {
+	-webkit-appearance: none; /*去掉苹果的默认UI来渲染按钮*/
+}
+em, i {
+	font-style: normal;
+}
+/**
+ +------------------------------------------------------------------------------
+ * Public Class
+ +------------------------------------------------------------------------------
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+.clearfix {
+	display: block;
+}
+.clear {
+	clear: both;
+}/* 清除浮动*/
+.colwrapper {
+	overflow: hidden;
+	zoom: 1 /*for ie*/;
+	margin: 5px auto;
+}/* 高度自适应 */
+.strong {
+	font-weight: bold;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.center {
+	margin: 0 auto;
+	text-align: center;
+}
+.show {
+	display: block;
+	visibility: visible;
+}
+.hide {
+	display: none;
+	visibility: hidden;
+}
+.block {
+	display: block;
+}
+.inline {
+	display: inline;
+}
+.transparent {
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;/** Firefox 3.5即将原生支持opacity属性，所以本条属性只在Firefox3以下版本有效 ***/
+	-khtml-opacity: 0.5;
+	opacity: 0.5;
+}
+.break {
+	word-wrap: break-word;
+	overflow: hidden; /*word-break:break-all;*/
+}
+.tal {
+	text-align: left
+}
+.tar {
+	text-align: right;
+}
+
+/**
+ +------------------------------------------------------------------------------
+ * 网站整布局命名规范
+ +------------------------------------------------------------------------------
+ * @codex   id和class命名采用该版块的英文单词或组合命名 如:newRelease
+ * @package  ORG
+ * @subpackage  RBAC
+ +------------------------------------------------------------------------------
+ */
+body, input, textarea, select {
+	font-family: normal 100%  "微软雅黑", "黑体", Arial;
+	color: #333;
+	}
+body {
+	background:#fff;
+}
+a {
+	color: #333;
+}
+
+/* 解决固定层在IE6下闪的问题 */
+
+body {
+	color: #333;
+	font: normal 100% "微软雅黑", "黑体", Arial; 
+	overflow-x: hidden;
+    background-color:#f3f3f3;
+}
+a {
+	outline: none;
+	text-decoration: none;
+	color: #333;
+}
+a:hover {
+	text-decoration: underline;
+	color: #059BFC;
+}
+.wrapper {
+	width: 640px;
+	margin: 0 auto;
+	clear: both;
+    /*background-color:#f3f3f3;*/
+    background-color:#fff;
+}
+
+.bk20 {
+	height: 20px;
+}
+
+.search_l { background:#e2404b; height:88px; display:none; } /*sh 2015.1.23*/
+.search_l .back { float:left; font-size:1.8em; text-align:center; width:120px; background:url(../Images/Slide/back_bg.png) 10px top no-repeat; line-height:2.8em; color:#ffffff; padding-left:10px; }
+.search_l .back a{ color:#ffffff; text-decoration:none}
+.search_l .user { float:right; right:10px; position:relative; font-size:1.8em; text-align:center; width:85px; background:url(../Images/Slide/userbg.png) left top no-repeat; line-height:3.0em; color:#ffffff; padding-left:35px;}
+.search_l .user a{ color:#ffffff; text-decoration:none}
+
+.focusOuter{ float:left; width:640px; height:220px; /*padding-top:14px;*/}
+.focusBox { position: relative; width:640px; height:220px; overflow: hidden; margin:0 auto; }
+.focusBox .pic{ position:relative; z-index:0; }
+.focusBox .pic img {  width:640px; height:220px; display: block; }
+.focusBox .hd { width:100%; position: absolute; bottom: 10px; text-align: center; font-size:0; z-index:1; }
+.focusBox .hd li{margin: 0 5px; background: url(../images/ad/dot.png) no-repeat 0 -16px; height: 16px; overflow: hidden; width: 16px; cursor: pointer;display:inline-block; *display:inline; zoom:1;  _background: url(../images/slide/dot8.png) no-repeat 0 -16px;}
+.focusBox .hd .on{ background-position:0 0; }
+.focusBox .prev,
+.focusBox .next { width: 60px; height: 90px; margin: -50px 0 0; display: none; background: url(../images/ad_ctr.png) no-repeat 0 0; position: absolute; top: 50%; z-index: 10; cursor: pointer; text-indent: -9999px; filter:alpha(opacity=20);opacity:0.2;  }
+.focusBox .prev { left: 0; }
+.focusBox .next { background-position: 0 -90px; right: 0; }
+.focusBox .prev:hover,
+.focusBox .next:hover { filter:alpha(opacity=50) !important;opacity:0.5 !important;  }
+
+
+.search_l .text1 {
+	background: none;
+	width: 380px;
+	height: 2.4em;
+	line-height:2.4em;
+	border: none; padding:15px 0 15px 50px;	
+	float: left; color:#505050;	
+	font-size:1.8em;
+	overflow:hidden;
+}
+.search_l .submit {
+	cursor: pointer;
+	width: 64px;
+	height: 90px;
+	border: none;
+	float: right;
+	margin-right:20px;
+	background:url(../images/search-cion.png) left top no-repeat;
+}
+.search_l .title { float:right; width:510px; text-align:center; left:-60px;font-size:2.4em; line-height:90px; color:#ffffff; position:relative; font-weight:bold}
+.search_l .title1 { float:left; width:510px;left:60px; text-align:center; font-size:2.4em; line-height:90px; color:#ffffff; position:relative; font-weight:bold}
+
+.stylebox { float:left; width:640px; background-color:#f3f3f3;  }
+.stylebox .li {
+    padding-top:30px;
+    background-color:#fff;
+    /*border-top:#928989 1px solid;*/ 
+    border-bottom:#928989 1px solid; 
+}
+.stylebox .name {
+    padding-left:40px;
+    font-size:2.0em;
+    font:bold;
+    height:60px;
+    line-height:60px;
+}
+.stylebox .vehicleNum {
+    padding-left:40px;
+    font-size:2.0em;
+    font:bold;
+    height:30px;
+    line-height:30px;
+}
+.stylebox .vehicleInfo {
+    padding-left:40px;
+    font-size:1.6em;
+    height:60px;
+    line-height:50px;
+}
+.stylebox .mdd {
+    padding-left:40px;
+    font-size:1.6em;
+    height:60px;
+    line-height:10px;
+}
+.stylebox .line{
+    padding-left:40px;
+    width:640px;
+    height:60px;
+}
+.stylebox .time{
+    padding-left:10px;
+    font-size:1.4em;
+    height:70px;
+    height:40px;
+    line-height:40px;
+}
+.stylebox .bk {
+    background-color:#f3f3f3;
+    height:14px;
+}
+.stylebox .imgTime {
+    padding-left:40px;
+    height:40px;
+    line-height:40px;
+}
+.stylebox .img1 {
+    padding-left:10px;
+    height:30px;
+    line-height:30px;
+}
+.stylebox .img2 {
+    padding-left:10px;
+    height:60px;
+    line-height:50px;
+}
